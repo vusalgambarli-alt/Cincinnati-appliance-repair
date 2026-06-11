@@ -1746,6 +1746,14 @@ document.getElementById('bookForm').addEventListener('submit', async (e) => {
       headers: { 'Accept': 'application/json' }
     });
     if (response.ok) {
+      // Google Ads conversion tracking — fires only on successful lead form submit
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18185127951/dMxGCPnS67wcEI-QrN9D',
+          'value': 50.0,
+          'currency': 'USD'
+        });
+      }
       msg.classList.add('active');
       form.reset();
       setTimeout(() => msg.classList.remove('active'), 4000);
