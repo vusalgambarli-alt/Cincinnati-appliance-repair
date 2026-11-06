@@ -994,6 +994,10 @@ nav a:hover { color: var(--accent); }
 header .logo-icon.logo-wide { height: 60px; filter: none; }
 @media (max-width: 900px) { header .logo-icon.logo-wide { height: 46px; } }
 @media (max-width: 480px) { header .logo-icon.logo-wide { height: 40px; } }
+.hero-checks { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 24px; padding: 0; font-size: 13.5px; color: #dbe9e1; }
+.hero-checks li { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.hero-checks strong { color: #5bc88a; font-weight: 700; }
+@media (max-width: 600px) { .hero-checks { gap: 8px 14px; font-size: 13px; } }
 </style>
 
 <!-- Google tag (gtag.js) -->
@@ -1037,10 +1041,11 @@ header .logo-icon.logo-wide { height: 60px; filter: none; }
       <h1>
         Your Appliance Broke?<br><span class="accent">Book Tonight</span> — We'll Call You at 8 AM</h1>
       <p class="lead">All appliance brands in Cincinnati &amp; surrounding suburbs</p>
-      <div class="free-diag-badge">
-        <span class="diag-icon">✓</span>
-        <span><strong>FREE Diagnosis &amp; Warranty</strong> With Any Repair</span>
-      </div>
+      <ul class="hero-checks">
+        <li><span class="diag-icon">✓</span>Licensed &amp; Insured</li>
+        <li><span class="diag-icon">✓</span>Experienced Technicians</li>
+        <li><span class="diag-icon">✓</span><span><strong>FREE Diagnosis</strong> With Repair</span></li>
+      </ul>
       <div class="hero-ctas">
         <a href="#book" class="btn-primary btn-wave">Schedule Now <span class="arrow-anim">→</span></a>
         
