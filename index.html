@@ -1943,5 +1943,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   render();setInterval(render,60000);
 })();
 </script>
+<!-- Google Ads: click-to-call conversion -->
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'conversion', {'send_to': 'AW-18560392892/1Od0COST2LMdELy9pJJF'});
+    }
+  }, true);
+</script>
 </body>
 </html>
